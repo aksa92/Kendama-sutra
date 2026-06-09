@@ -1,0 +1,6 @@
+{
+  "name": "Zodiac Kendama Skill Tree",
+  "description": "An interactive astrometric-themed Japanese Kendama skill progression tree and live customizable cosmic forge with server-side AI-powered Gemini oracle destiny readings.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

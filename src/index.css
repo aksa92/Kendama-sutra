@@ -1,0 +1,59 @@
+@import "tailwindcss";
+
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@200;300;400;500;600;700;800&family=Space+Grotesk:wght@300;400;500;600;700&family=JetBrains+Mono:wght@200;300;400;500;600&family=Orbitron:wght@400;500;600;700;800;900&display=swap');
+
+@theme {
+  --font-sans: "Plus Jakarta Sans", system-ui, sans-serif;
+  --font-display: "Space Grotesk", system-ui, sans-serif;
+  --font-mono: "JetBrains Mono", ui-monospace, SFMono-Regular, monospace;
+  --font-scifi: "Orbitron", system-ui, sans-serif;
+}
+
+@layer utilities {
+  .text-glow {
+    text-shadow: 0 0 12px rgba(255, 255, 255, 0.5);
+  }
+}
+
+::-webkit-scrollbar { width: 5px; height: 0; }
+::-webkit-scrollbar-track { background: transparent; }
+::-webkit-scrollbar-thumb { background: rgba(255,255,255,0.1); border-radius: 999px; }
+
+@keyframes slow-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.animate-slow-spin {
+  animation: slow-spin 240s linear infinite;
+}
+
+@keyframes reverse-slow-spin {
+  from {
+    transform: rotate(360deg);
+  }
+  to {
+    transform: rotate(0deg);
+  }
+}
+
+.animate-reverse-slow-spin {
+  animation: reverse-slow-spin 360s linear infinite;
+}
+
+/* Pulse keyframes for active constellation connections */
+@keyframes dash {
+  to {
+    stroke-dashoffset: -40;
+  }
+}
+
+.animate-dash-glow {
+  stroke-dasharray: 8, 4;
+  animation: dash 3s linear infinite;
+}
+
